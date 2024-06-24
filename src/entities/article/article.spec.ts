@@ -2,6 +2,7 @@ import Article from './article'
 import { mockCommentsData } from '../comment/comment.mock'
 import Comment from '../comment/comment'
 import { mockArticlesData } from './article.mock'
+import { describe, it, expect } from 'vitest'
 
 describe('>>> Article', () => {
   describe('>> constructor', () => {
