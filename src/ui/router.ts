@@ -1,19 +1,15 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import { HomePage } from '@/ui/pages'
-
-Vue.use(VueRouter)
+import { createMemoryHistory, createRouter } from 'vue-router'
+import HomePage from '@/ui/pages/home/home.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HomePage
-  }
+    component: HomePage,
+  },
 ]
 
-export const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+export const router = createRouter({
+  history: createMemoryHistory(),
+  routes,
 })
